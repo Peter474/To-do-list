@@ -1,0 +1,233 @@
+body {
+  background-image: url("pexels-printexstar-11654701.jpg"); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.1); /* شفافية */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.container h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 40px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #2f5f9d;
+    box-shadow: 0 0 8px rgba(47, 95, 157, 0.6);
+}
+
+button {
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #2f5f9d, #1c3f6e);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1c3f6e, #162c4d);
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.15);
+    margin: 15px auto;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+    width: 80%;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
+}
+
+li, h3 {
+    flex: 1;
+    margin: 0 10px;
+    color: #ffffff;
+}
+
+.styled-checkbox {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #2f5f9d;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.styled-checkbox:checked {
+    background-color: #2f5f9d;
+    border-color: #1c3f6e;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M20.285 6.709l-11.41 11.41-5.657-5.657 1.414-1.414 4.243 4.243 9.996-9.996z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section1, .section2 {
+    margin: 30px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+.section1 h3, .section2 h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.section1 hr, .section2 hr {
+    border: none;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    width: 90%;
+    margin: 15px auto;
+    opacity: 0.6;
+}
+
+#datePicker {
+    margin-left: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#datePicker:focus {
+    border-color: #2f5f9d;
+    box-shadow: 0 0 6px rgba(47, 95, 157, 0.5);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        width: 65%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+
+    li {
+        margin: 12px auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+        margin: 25px auto;
+        padding: 18px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    li {
+        margin: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .styled-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 15px auto;
+        padding: 14px;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+        margin-left: -9px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .styled-checkbox {
+        width: 18px;
+        height: 18px;
+    }
+}

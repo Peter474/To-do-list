@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <label for ="datePicker">Choose date</label>
+        <input type="date" id="datePicker">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button id="addTaskButton">Add Task</button>
+
+    </div>
+     <div class="section1">
+            <h3>UnCompleted Tasks</h3>
+            <ul id="UncompletedTasks">
+            </ul>
+        </div>
+        <div class="section2">
+            <hr>
+            <h3>Completed Tasks</h3>
+            <ul id="completedtasks">
+               
+            </ul> 
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
