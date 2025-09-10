@@ -3,7 +3,17 @@
     { "text": "Buy milk", "completed": false },
     { "text": "Call mom", "completed": true }
   ],
-  "2025-09-7": [
+  "2025-09-07": [
     { "text": "Workout", "completed": false }
+  ],
+  "2025-09-08": [
+    { "text": "Read a book", "completed": false }
+  ],
+  "2025-09-09": [
+    { "text": "Grocery shopping", "completed": true }
+  ],
+  "2025-09-10": [
+    { "text": "Finish project report", "completed": false }
   ]
+
 }
