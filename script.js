@@ -5,6 +5,7 @@ const UncompletedTasks = document.getElementById('UncompletedTasks');
 const completedtasks = document.getElementById('completedtasks');
 
 let tasksData = JSON.parse(localStorage.getItem('tasksData')) || {};
+
 datePicker.value = new Date().toISOString().split('T')[0];
 
 function loadTasksForDate(date) {
@@ -16,7 +17,7 @@ function loadTasksForDate(date) {
   tasksData[date].forEach(task => {
     addTaskToDOM(task.text, task.completed, date);
   });
-}
+  if(!date) { alert("Please select a valid date."); addTaskButton.disabled = true; addTaskButton.style= "background: #888; cursor: not-allowed; transform: none;"; ; return; }}
 
 function saveTasks() {
   localStorage.setItem('tasksData', JSON.stringify(tasksData));
@@ -113,7 +114,7 @@ function addTaskToDOM(taskText, completed, date) {
       if (input.value.trim() !== '') {
         const currentDate = datePicker.value;
         const taskArr = tasksData[currentDate];
-        const taskObj = taskArr.find(t => t.text === taskText);
+        const taskObj = taskArr.find(t => t.text === taskSpan.textContent);
         taskObj.text = input.value;
         taskSpan.textContent = input.value;
         saveTasks();
@@ -123,4 +124,15 @@ function addTaskToDOM(taskText, completed, date) {
   });
 }
 
-loadTasksForDate(datePicker.value);
+if (Object.keys(tasksData).length === 0) {
+  fetch('./data.json')
+    .then(response => response.json())
+    .then(data => {
+      tasksData = data;
+      saveTasks();
+      loadTasksForDate(datePicker.value);
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+} else {
+  loadTasksForDate(datePicker.value);
+}
