@@ -11,8 +11,8 @@ body {
 .container {
     max-width: 600px;
     margin: 60px auto;
-    background: rgba(255, 255, 255, 0.1); /* شفافية */
-    backdrop-filter: blur(10px); /* Glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
@@ -147,8 +147,36 @@ li, h3 {
     border-color: #2f5f9d;
     box-shadow: 0 0 6px rgba(47, 95, 157, 0.5);
 }
+footer {
+    text-align: center;
+    padding: 15px;
+   
+    backdrop-filter: blur(5px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+footer a {
+    color: #2f9dff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-/* Responsiveness */
+footer a:hover {
+    color: #1c6db2;
+    text-decoration: underline;
+}
+
+footer i {
+    margin-right: 6px;
+    font-size: 18px;
+}
+
 @media (max-width: 1024px) {
     .container {
         width: 85%;
@@ -170,6 +198,14 @@ li, h3 {
     li {
         margin: 12px auto;
         width: 90%;
+    }
+    .styled-checkbox {
+        width: 22px;
+        height: 22px;
+    }
+    footer {
+        font-size: 14px;
+        padding: 14px;
     }
 }
 
@@ -201,6 +237,10 @@ li, h3 {
         width: 20px;
         height: 20px;
     }
+    footer {
+        font-size: 13px;
+        padding: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -230,5 +270,13 @@ li, h3 {
         width: 18px;
         height: 18px;
     }
-}
+        footer {
+        font-size: 12px;
+        padding: 10px;
+    }
 
+    footer i {
+        font-size: 16px;
+        margin-right: 4px;
+    }
+}
