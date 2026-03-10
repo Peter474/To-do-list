@@ -1,15 +1,13 @@
 {
-    "name": "Taskly — To Do List",
-    "short_name": "Taskly",
-    "description": "A beautiful daily task manager by Peter Emad",
+    "name": "To Do List",
+    "short_name": "To Do",
+    "description": "Daily task manager by Peter Emad",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#080812",
-    "theme_color": "#0d0d1a",
-    "orientation": "portrait-primary",
+    "background_color": "#1a1a2e",
+    "theme_color": "#1a1a2e",
+    "orientation": "portrait",
     "scope": "./",
-    "lang": "en",
-    "categories": ["productivity", "utilities"],
     "icons": [
         {
             "src": "icons/icon-192.png",
@@ -22,16 +20,6 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
-        }
-    ],
-    "screenshots": [],
-    "shortcuts": [
-        {
-            "name": "Add Task for Today",
-            "short_name": "Add Task",
-            "description": "Open Taskly to add a new task",
-            "url": "./index.html",
-            "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]
         }
     ]
 }
