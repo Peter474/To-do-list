@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskly — by Peter Emad</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d0d1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Taskly">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <!-- Install banner -->
+    <div class="install-banner" id="installBanner">
+        <div class="install-content">
+            <div class="install-icon"><i class="fas fa-download"></i></div>
+            <div class="install-text">
+                <strong>Install Taskly</strong>
+                <span>Add to your home screen for offline use</span>
+            </div>
+        </div>
+        <div class="install-actions">
+            <button class="install-btn" id="installBtn">Install</button>
+            <button class="dismiss-btn" id="dismissBanner"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <div class="app-wrapper">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-top">
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h1 class="app-title">Taskly</h1>
+                </div>
+                <div class="header-meta" id="todayDisplay"></div>
+            </div>
+
+            <!-- Date Picker -->
+            <div class="date-section">
+                <label class="date-label">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Select Date</span>
+                </label>
+                <div class="date-nav">
+                    <button class="nav-btn" id="prevDay"><i class="fas fa-chevron-left"></i></button>
+                    <input type="date" id="datePicker">
+                    <button class="nav-btn" id="nextDay"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <i class="fas fa-plus input-icon"></i>
+                    <input type="text" id="taskInput" placeholder="What needs to be done?">
+                    <button id="addTaskButton">
+                        <span>Add</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num" id="totalCount">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num pending" id="pendingCount">0</span>
+                <span class="stat-label">Pending</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num done" id="doneCount">0</span>
+                <span class="stat-label">Done</span>
+            </div>
+            <div class="progress-wrap">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tasks Container -->
+        <main class="tasks-container">
+            <!-- Uncompleted -->
+            <section class="task-section" id="section-pending">
+                <div class="section-header">
+                    <div class="section-title">
+                        <div class="section-dot pending-dot"></div>
+                        <h3>In Progress</h3>
+                    </div>
+                    <span class="section-badge" id="pendingBadge">0</span>
+                </div>
+                <ul id="UncompletedTasks" class="task-list"></ul>
+                <div class="empty-state" id="emptyPending">
+                    <i class="fas fa-clipboard-check"></i>
+                    <p>All caught up! Add a task above.</p>
+                </div>
+            </section>
+
+            <!-- Completed -->
+            <section class="task-section" id="section-done">
+                <div class="section-header">
+                    <div class="section-title">
+                        <div class="section-dot done-dot"></div>
+                        <h3>Completed</h3>
+                    </div>
+                    <span class="section-badge done-badge" id="doneBadge">0</span>
+                </div>
+                <ul id="completedtasks" class="task-list"></ul>
+                <div class="empty-state" id="emptyDone">
+                    <i class="fas fa-star"></i>
+                    <p>Complete tasks to see them here.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Crafted by <strong>Peter Emad</strong> &copy; 2025</p>
+            <a href="https://www.linkedin.com/in/peter-emad-4911a9328/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
